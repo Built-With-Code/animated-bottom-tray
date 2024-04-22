@@ -13,7 +13,7 @@ interface TrayProps {
   closeTray: () => void;
 }
 
-const Tray: React.FC<TrayProps> = ({ closeTray }) => {
+const Tray = ({ closeTray }: TrayProps) => {
   const [content, setContent] = useState("options");
 
   const trayContent: Record<string, ReactNode> = {

@@ -18,10 +18,7 @@ interface ContentProps {
   closeTray: () => void;
 }
 
-export const OptionsMenu: React.FC<ContentProps> = ({
-  setContent,
-  closeTray,
-}) => {
+export const OptionsMenu = ({ setContent, closeTray }: ContentProps) => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex justify-between items-center pb-6 border-b-[1px] border-neutral-100">
@@ -59,10 +56,7 @@ export const OptionsMenu: React.FC<ContentProps> = ({
   );
 };
 
-export const PrivateKey: React.FC<ContentProps> = ({
-  setContent,
-  closeTray,
-}) => {
+export const PrivateKey = ({ setContent, closeTray }: ContentProps) => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-3 pb-6 border-b-[1px] border-neutral-100">
@@ -114,10 +108,7 @@ export const PrivateKey: React.FC<ContentProps> = ({
   );
 };
 
-export const RecoveryPhrase: React.FC<ContentProps> = ({
-  setContent,
-  closeTray,
-}) => {
+export const RecoveryPhrase = ({ setContent, closeTray }: ContentProps) => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-3 pb-6 border-b-[1px] border-neutral-100">
@@ -169,10 +160,7 @@ export const RecoveryPhrase: React.FC<ContentProps> = ({
   );
 };
 
-export const RemoveWallet: React.FC<ContentProps> = ({
-  setContent,
-  closeTray,
-}) => {
+export const RemoveWallet = ({ setContent, closeTray }: ContentProps) => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-3">
