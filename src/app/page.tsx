@@ -12,7 +12,7 @@ export default function Home() {
     <main className="min-h-screen flex justify-center items-center">
       <Button onClick={() => setTrayOpen(true)}>Open tray</Button>
       <AnimatePresence>
-        {trayOpen && <Tray setTrayOpen={setTrayOpen} />}
+        {trayOpen && <Tray closeTray={() => setTrayOpen(false)} />}
       </AnimatePresence>
     </main>
   );
