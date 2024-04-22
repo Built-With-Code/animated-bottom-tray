@@ -47,7 +47,7 @@ const Tray: React.FC<TrayProps> = ({ closeTray }) => {
         className="absolute bottom-4 inset-x-0 mx-auto w-[22rem] min-h-10 bg-neutral-50 px-8 pb-6 overflow-hidden"
         initial={{ y: 336 }}
         animate={{ y: 0 }}
-        exit={{ y: 336 }}
+        exit={{ y: 500 }}
         transition={{ duration: 0.2, ease: "easeIn" }}
         style={{ borderRadius: 28, y: dragY }}
         layout
