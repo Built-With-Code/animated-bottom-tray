@@ -1,5 +1,3 @@
-import { Button } from "../ui/button";
-
 import {
   Lock,
   TriangleAlert,
@@ -12,6 +10,8 @@ import {
   Eye,
   CircleAlert,
 } from "lucide-react";
+
+import WideButton from "../WideButton";
 
 interface ContentProps {
   setContent: (_: string) => void;
@@ -28,29 +28,20 @@ export const OptionsMenu = ({ setContent, closeTray }: ContentProps) => {
         </button>
       </div>
       <div className="flex flex-col gap-3">
-        <Button
-          className="flex justify-start gap-4 w-full bg-gray-100 rounded-xl"
+        <WideButton
           variant="secondary"
           onClick={() => setContent("privateKey")}
         >
           <Lock className="h-4 w-4" /> View Private Key
-        </Button>
-        <Button
-          className="flex justify-start gap-4 w-full bg-gray-100 rounded-xl"
-          variant="secondary"
-          onClick={() => setContent("recovery")}
-        >
+        </WideButton>
+        <WideButton variant="secondary" onClick={() => setContent("recovery")}>
           <FileText className="h-4 w-4" />
           View Recovery Phrase
-        </Button>
-        <Button
-          className="flex justify-start gap-4 w-full rounded-xl"
-          variant="destructive"
-          onClick={() => setContent("remove")}
-        >
+        </WideButton>
+        <WideButton variant="destructive" onClick={() => setContent("remove")}>
           <TriangleAlert className="h-4 w-4" />
           Remove Wallet
-        </Button>
+        </WideButton>
       </div>
     </div>
   );
@@ -88,20 +79,17 @@ export const PrivateKey = ({ setContent, closeTray }: ContentProps) => {
           </div>
         </div>
         <div className="flex gap-4 w-full">
-          <Button
-            className="bg-gray-100 rounded-full flex-1"
+          <WideButton
+            cta
             variant="secondary"
             onClick={() => setContent("options")}
           >
             Cancel
-          </Button>
-          <Button
-            className="flex gap-2 rounded-full flex-1"
-            onClick={() => setContent("options")}
-          >
+          </WideButton>
+          <WideButton cta onClick={() => setContent("options")}>
             <ScanFace className="h-4 w-4" />
             Reveal
-          </Button>
+          </WideButton>
         </div>
       </div>
     </div>
@@ -140,20 +128,17 @@ export const RecoveryPhrase = ({ setContent, closeTray }: ContentProps) => {
           </div>
         </div>
         <div className="flex gap-4 w-full">
-          <Button
-            className="bg-gray-100 rounded-full flex-1"
+          <WideButton
+            cta
             variant="secondary"
             onClick={() => setContent("options")}
           >
             Cancel
-          </Button>
-          <Button
-            className="flex gap-2 rounded-full flex-1"
-            onClick={() => setContent("options")}
-          >
+          </WideButton>
+          <WideButton cta onClick={() => setContent("options")}>
             <ScanFace className="h-4 w-4" />
             Reveal
-          </Button>
+          </WideButton>
         </div>
       </div>
     </div>
@@ -179,20 +164,20 @@ export const RemoveWallet = ({ setContent, closeTray }: ContentProps) => {
       </div>
       <div>
         <div className="flex gap-4 w-full">
-          <Button
-            className="bg-gray-100 rounded-full flex-1"
+          <WideButton
+            cta
             variant="secondary"
             onClick={() => setContent("options")}
           >
             Cancel
-          </Button>
-          <Button
-            className="flex gap-2 rounded-full flex-1"
+          </WideButton>
+          <WideButton
+            cta
             variant="destructive"
             onClick={() => setContent("options")}
           >
             Continue
-          </Button>
+          </WideButton>
         </div>
       </div>
     </div>
